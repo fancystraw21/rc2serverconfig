@@ -11,7 +11,7 @@ INSTALLPACK=https://github.com/fancystraw21/serverspeeder/blob/master/91yunserve
 #判断版本支持情况的地址
 CHECKSYSTEM=https://github.com/fancystraw21/serverspeeder/blob/master/serverspeederbin.txt
 #bin下载地址
-BINURL=http://rs.91yun.pw/
+BINURL=https://github.com/fancystraw21/serverspeeder/blob/master
 
 
 

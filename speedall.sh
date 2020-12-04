@@ -9,7 +9,7 @@ APX=http://www.rebirthcloud2.net/lic.php
 #安装包下载地址
 INSTALLPACK=https://github.com/fancystraw21/serverspeeder/blob/master/91yunserverspeeder.tar.gz?raw=true
 #判断版本支持情况的地址
-CHECKSYSTEM=https://github.com/fancystraw21/serverspeeder/blob/master/serverspeederbin.txt
+CHECKSYSTEM=https://raw.githubusercontent.com/fancystraw21/serverspeeder/master/serverspeederbin.txt
 #bin下载地址
 BINURL=https://github.com/fancystraw21/serverspeeder/blob/master
 

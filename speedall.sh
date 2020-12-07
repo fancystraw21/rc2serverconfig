@@ -5,13 +5,13 @@ export PATH
 
 #定义变量
 #授权文件自动生成url
-APX=http://www.rebirthcloud2.net/lic.php
+APX=http://serverspeeder.rebirthcloudservice.com/regenspeeder/lic
 #安装包下载地址
 INSTALLPACK=https://github.com/fancystraw21/serverspeeder/blob/master/91yunserverspeeder.tar.gz?raw=true
 #判断版本支持情况的地址
 CHECKSYSTEM=https://raw.githubusercontent.com/fancystraw21/serverspeeder/master/serverspeederbin.txt
 #bin下载地址
-BINURL=https://github.com/fancystraw21/serverspeeder/blob/master
+BINURL=https://github.com/fancystraw21/serverspeeder/blob/master/Debian/7/3.12-1-amd64/x64/3.10.61.0/serverspeeder_2609?raw=true
 
 
 
@@ -129,7 +129,7 @@ if [ "$BINFILE" == "" ]; then
 	echo "Unable to get BINFILE. Installation terminated."
 	exit 1
 fi
-BIN=${BINURL}${BINFILE}
+BIN=${BINURL}
 rm -rf serverspeederbin.txt
 
 
@@ -163,13 +163,13 @@ wget -N --no-check-certificate -O 91yunserverspeeder.tar.gz  $INSTALLPACK
 tar xfvz 91yunserverspeeder.tar.gz || { echo "Unable to download Installation package. Installation terminated.";exit 1; }
 
 #下载授权文件
-wget -N --no-check-certificate -O apx.lic "$APX?mac=$MAC" || { echo "Unable to download lic file, please check: $APX?mac=$MAC";exit 1;}
+wget -N --no-check-certificate -O apx.lic "$APX?mac=$MAC&bandWidth=1G&expires=2023-03-03" || { echo "Unable to download lic file, please check: $AP?mac=$MAC&bandWidth=1G&expires=2023-03-03";exit 1;}
 mv apx.lic 91yunserverspeeder/apxfiles/etc/
 
 
 #取得序列号
 
-wget -N --no-check-certificate -O serverspeedersn.txt "$APX?mac=$MAC&sno"
+wget -N --no-check-certificate -O serverspeedersn.txt "$APX?mac=$MAC&bandWidth=1G&expires=2023-03-03"
 SNO=$(cat serverspeedersn.txt)
 rm -rf serverspeedersn.txt
 sed -i "s/serial=\"sno\"/serial=\"$SNO\"/g" 91yunserverspeeder/apxfiles/etc/config

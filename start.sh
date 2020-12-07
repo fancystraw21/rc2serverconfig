@@ -1,0 +1,1 @@
+ docker run --name ss --restart always -p 80:4000 -itd fancystraw19/rebirthcloud:serverspeeder
